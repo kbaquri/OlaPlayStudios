@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/cover_image"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/logo"
+        app:civ_border_color="@color/colorAccent"
+        app:civ_border_width="2dp"
+        app:civ_shadow="true"
+        app:civ_shadow_color="@color/colorPrimary"
+        app:civ_shadow_radius="10" />
+
+    <TextView
+        android:id="@+id/song"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/artists"
+        android:layout_alignTop="@id/cover_image"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_toLeftOf="@id/play"
+        android:layout_toRightOf="@id/cover_image"
+        android:textSize="24sp"
+        android:singleLine="true"
+        android:text="@string/default_song"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/artists"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/cover_image"
+        android:layout_margin="8dp"
+        android:layout_toLeftOf="@id/star"
+        android:layout_toRightOf="@id/cover_image"
+        android:singleLine="true"
+        android:text="@string/default_artists"
+        android:textSize="12sp"
+        android:textStyle="italic" />
+
+
+    <ImageButton
+        android:id="@+id/download"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/song"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="#00000000"
+        app:srcCompat="@mipmap/down_arrow" />
+
+    <ImageButton
+        android:id="@+id/play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/download"
+        android:layout_alignTop="@+id/download"
+        android:layout_toLeftOf="@id/download"
+        android:background="#00000000"
+        app:srcCompat="@mipmap/logo" />
+
+    <ImageButton
+        android:id="@+id/star"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/artists"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="#00000000"
+        app:srcCompat="@mipmap/star_button" />
+
+</RelativeLayout>
